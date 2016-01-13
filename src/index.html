@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzles</title>
+</head>
+<body>
+<div id="container"></div>
+
+<script id="template" type="text/html">
+    <table class="grid">
+        {{#with grid}}
+        <tr class="numbers top">
+            <td></td>
+            {{#each sides.top}}
+            <td>
+            {{#each this}}
+            <div class="number">{{this}}</div>
+            {{/each}}
+            </td>
+            {{/each}}
+        </tr>
+        {{#each cells:y}}
+        <tr class="row">
+            <td class="numbers side">
+                {{#each sides.side[y]}}
+                <div class="number">{{this}}</div>
+                {{/each}}
+            </td>
+            {{#each this:x}}
+            <td class="cell {{#if this == 1}}filled{{elseif this == 2}}crossed{{/if}}" on-tap="tapped:{{x}},{{y}}"></td>
+            {{/each}}
+        </tr>
+        {{/each}}
+        {{/with}}
+    </table>
+</script>
+
+<script src="bundle.js"></script>
+</body>
+</html>

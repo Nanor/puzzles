@@ -1,0 +1,24 @@
+.grid
+  border-collapse: collapse
+  .row
+    padding: 0
+    margin: 0
+
+    .cell
+      width: 15px
+      height: 15px
+      padding: 1px
+      border: 1px solid whitesmoke
+
+      &.filled
+        background: black
+      &.crossed
+        background: red
+  .top
+    .number
+      width: 100%
+      text-align: center
+  .side
+    .number
+      display: inline-block
+      margin-right: 5px

@@ -1,0 +1,29 @@
+{
+  "name": "puzzles",
+  "author": "Ronan Forman <ronan131@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nanor/puzzles.git"
+  },
+  "scripts": {
+    "build": "webpack --progress --colors",
+    "build:prod": "webpack --progress --colors && uglifyjs out/bundle.js --compress --mangle -o out/bundle.js",
+    "serve": "webpack-dev-server"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.10.0",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "node-sass": "^3.4.2",
+    "ractive": "^0.7.3",
+    "ractive-events-tap": "^0.3.0",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.11"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^1.14.1"
+  }
+}
